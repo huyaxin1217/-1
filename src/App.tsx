@@ -10,6 +10,7 @@ import Courses from './pages/Courses';
 import CheckIn from './pages/CheckIn';
 import Store from './pages/Store';
 import Me from './pages/Me';
+import Warning from './pages/Warning';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="check-in" element={<CheckIn />} />
           <Route path="store" element={<Store />} />
           <Route path="me" element={<Me />} />
+          <Route path="warning" element={<Warning />} />
         </Route>
       </Routes>
     </BrowserRouter>

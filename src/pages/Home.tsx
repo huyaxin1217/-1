@@ -52,15 +52,19 @@ export default function Home() {
                 <div className="text-xl font-bold text-slate-800">7h 20m</div>
               </div>
             </div>
-            <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-500">
+            <Link to="/warning" className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-3 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-12 h-12 bg-red-50 rounded-bl-full -mr-2 -mt-2 transition-transform group-hover:scale-110"></div>
+              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-500 relative z-10">
                 <Zap size={20} />
               </div>
-              <div>
-                <div className="text-xs text-slate-400 font-medium mb-1">睡眠效率</div>
-                <div className="text-xl font-bold text-slate-800">85%</div>
+              <div className="relative z-10">
+                <div className="text-xs text-slate-400 font-medium mb-1 flex items-center gap-1">
+                  心理状态
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                </div>
+                <div className="text-xl font-bold text-slate-800">查看预警</div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
